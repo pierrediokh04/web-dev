@@ -18,6 +18,7 @@ function createMealItem(meal) {
  if (meal.vegetarian) {
     li.classList.add("veg");
  }
+ return li ;
 }
 
 // TODO 2 — Loop over meals (for...of) and append each item to the #menu list.
@@ -29,7 +30,7 @@ for (const meal of meals){
 
 // TODO 3 — Write in #count: "5 meals · 2 vegetarian"
 // Hint: meals.length, and filter(...).length for the vegetarian ones.
-const vegetarianCount = meals.filter(meal => meal.vegetarien).length;
+const vegetarianCount = meals.filter(meal => meal.vegetarian).length;
 count.textContent = `${meal.length} meals - ${vegetarianCount} vegetarian`;
 
 // BONUS 4 — Show the day in bold: inside the li, create a <strong> for the day,
